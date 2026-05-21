@@ -52,10 +52,21 @@ Exemple:
 """
 
 def read_and_write():
-    # Write here your code
+    #Solicita els valors
+    nom = str(input("Insert you name: "))
+    edat = str(input("Insert your age: ")) 
+
+    #Crea el fitxer
+    with open("file.txt", "w") as fitxer:
+        fitxer.write(nom + "\n")
+        fitxer.write(str(edat) + "\n")
+    #Retorna el contingut    
+    with open("file.txt", "r") as fitxer:
+        for line in fitxer:
+            print(line.strip())
     pass
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# read_and_write()
+read_and_write()
