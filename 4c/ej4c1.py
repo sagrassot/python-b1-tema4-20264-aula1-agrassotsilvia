@@ -92,7 +92,7 @@ class Person:
 
     # Method that returns the description of the person
     def describe(self):
-        # Write here your code
+        return f"{self.name} is {self.age} years old."
         pass
 
 
@@ -100,12 +100,14 @@ class Person:
 class Student(Person):
     # Constructor
     def __init__(self, name, age, major):
-        # Write here your code
+        super().__init__(name, age)
+        self.major = major
         pass
 
     # Method that returns the description of the student
     def describe(self):
-        # Write here your code
+        description = super().describe()
+        return f"{description} Studies {self.major}."
         pass
 
 
@@ -116,5 +118,5 @@ student_1 = Student("Ana", 25, "Systems Engineering")
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
 # Access to object methods
-#print(person_1.describe())  # Juan is 30 years old.
-#print(student_1.describe())  # Ana is 25 years old. Studies Systems Engineering.
+print(person_1.describe())  # Juan is 30 years old.
+print(student_1.describe())  # Ana is 25 years old. Studies Systems Engineering.
