@@ -50,7 +50,7 @@ Exemple:
 
 
 def average_score_ram(scores_dict):
-    average = sum(scores_dict.values()) / len(scores_dict)  # ❌ Era / 1 → ✅ / len(scores_dict)
+    average = sum(scores_dict.values()) / len(scores_dict) 
     return average
     pass
 
