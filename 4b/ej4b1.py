@@ -45,7 +45,10 @@ Exemple:
 
 def squared_sum_ram(numbers_list):
     # Store the list in RAM
-    # Write here your code
+    total = 0
+    for x in numbers_list:
+        total += x ** 2
+    return total
     pass
 
 
@@ -59,6 +62,6 @@ def squared_sum_heap(numbers_list):
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# numbers_list = [6, 4, 7]
-# print(squared_sum_ram(numbers_list))
-# print(squared_sum_heap(numbers_list))
+numbers_list = [6, 4, 7]
+print(squared_sum_ram(numbers_list))
+print(squared_sum_heap(numbers_list))
